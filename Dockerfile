@@ -6,9 +6,6 @@ ENV DEBIAN_FRONTEND noninteractive
 
 EXPOSE 9000
 
-# Data volume
-VOLUME /srv
-
 # Install packages
 RUN apt-get update && apt-get install -y \
 	php5-fpm \
