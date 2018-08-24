@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 
 # Initialize default FPM conf
 RUN rm -f /etc/php5/fpm/pool.d/*
-ADD pool.d/default.conf /etc/php5/fpm/pool.d/default.conf
+ADD pool.d/www.conf /etc/php5/fpm/pool.d/www.conf
 
 # Setup startup script
 CMD ["php5-fpm",  "--nodaemonize", "--force-stderr", "--fpm-config", "/etc/php5/fpm/php-fpm.conf", "-c", "/etc/php5/fpm/php.ini"]
